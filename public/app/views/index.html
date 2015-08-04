@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="syncApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Sync test</title>
+		<base href="/">
+
+		<link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<script src="assets/libs/sio-client/socket.io.js"></script>
+
+		<script src="assets/libs/qrcode-generator/js/qrcode.js"></script>
+
+		<script src="assets/libs/angular/angular.js"></script>
+		<script src="assets/libs/angular-route/angular-route.min.js"></script>
+		<script src="assets/libs/angular-qrcode/angular-qrcode.js"></script>
+		<script src="assets/libs/angular-socket-io/socket.min.js"></script>
+		
+		<script src="app/services/socketService.js"></script>
+		<script src="app/controllers/mainCtrl.js"></script>
+		
+		<script src="app/app.routes.js"></script>
+		<script src="app/app.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="page-header">
+				<h1>Sync test</h1>
+			</div>
+			<div ng-view></div>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<!-- <script src="assets/libs/jquery/dist/jquery.min.js"></script> -->
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<!-- <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script> -->
+	</body>
+</html>
