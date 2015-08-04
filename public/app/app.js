@@ -1,1 +1,1 @@
-var app = angular.module('syncApp', ['app.routes', 'mainCtrl']);
+var app = angular.module('syncApp', ['app.routes', 'mainCtrl', 'ngMaterial']);

@@ -3,12 +3,22 @@
 		<div class="progress">
 		  <div class="progress-bar" role="progressbar" aria-valuenow="{{ main.value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ main.value }}%;">{{ main.value }}%</div>
 		</div>
-		<input type="range" min="0" max="100" step="1" class="form-control" ng-model="main.value" ng-change="main.syncValue()">
+		<input type="range" min="0" max="100" step="1" ng-model="main.value" ng-change="main.syncValue()">
 		<hr>
-		<ul class="list-group">
-		  <li class="list-group-item"><strong>Socket_id:</strong> {{ main.socket_id }}</li>
-		  <li class="list-group-item"><strong>Channel_id:</strong> {{ main.room_id }}</li>
-		</ul>
+		<table class="table table-bordered">
+			<tr>
+				<th>Value:</th>
+				<td>{{ main.value }}</td>
+			</tr>
+			<tr>
+				<th>Socket_id:</th>
+				<td>{{ main.socket_id }}</td>
+			</tr>
+			<tr>
+				<th>Channel_id:</th>
+				<td>{{ main.room_id }}</td>
+			</tr>
+		</table>
 	</div>
 	<div class="col-sm-5 text-center">
 		<div class="panel panel-default">
@@ -23,3 +33,30 @@
 	</div>
 </div>
 <hr>
+
+<!-- <div layout="column">
+	<div layout="row" layout-align="center">
+		<h1 class="md-display-2">Sync test</h1>
+	</div>
+	<md-divider></md-divider>
+	<div layout="row" layout-align="center">
+		<div>
+			<md-progress-linear md-mode="determinate" value="{{ main.value }}"></md-progress-linear>
+			<md-slider ng-model="main.value" min="0" max="100" ng-change="main.syncValue()"></md-slider>
+			<md-divider></md-divider>
+			<md-list>
+				<md-list-item><strong>Socket_id:</strong> {{ main.socket_id }}</md-list-item>
+				<md-list-item><strong>Channel_id:</strong> {{ main.room_id }}</md-list-item>
+			</md-list>
+		</div>
+		<div layout-align="center">
+		<md-card>
+			<qrcode data="{{ main.qrdata }}" size="170"></qrcode>
+			<md-card-content>
+				<h2>Scan this code with your devi</h2>
+				<p>Or visit: <a href="{{ main.qrdata }}">{{ main.qrdata }}</a></p>
+			</md-card-content>
+		</md-card>
+		</div>
+	</div>	
+</div> -->
